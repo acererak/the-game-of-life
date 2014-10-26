@@ -1,9 +1,7 @@
 the-game-of-life
 ================
 
-An experiment in rule design for a cellular automaton life simulator. There are zombies.
-
-This is my first major project in an introductory CS class at Reed College, for professor Jim Fix.
+An experiment in rule design for a cellular automaton life simulator. This is my first major project in an introductory CS class at Reed College, for professor Jim Fix.
 
 Three files comprise this project:
 
