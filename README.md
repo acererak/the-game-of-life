@@ -3,6 +3,8 @@ the-game-of-life
 
 An experiment in rule design for a cellular automaton life simulator. This is my first major project in an introductory CS class at Reed College, for professor Jim Fix.
 
+To learn more about Conway's Game of Life, venture here: http://en.wikipedia.org/wiki/Conway's_Game_of_Life.
+
 Three files comprise this project:
 
 Grid.py provides code for the Grid class which defines an object that performs the grid simulation. In it, the grid itself is defined, framed, and painted. Button inputs for the interact are also provided.
