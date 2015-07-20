@@ -1,12 +1,3 @@
-"""
-    Name:  Zak Garriss
-    Login: garrissz
-    Lab: 9am
-    Lecture: 12pm
-"""
-
-# Project 1
-
 import random
 
 # * * * * * * * * Modified Rule 1 * * * * * * * * * * *
