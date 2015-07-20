@@ -1,10 +1,3 @@
-"""
-    Name:  Zak Garriss
-    Login: garrissz
-    Lab: 9am
-    Lecture: 12pm
-"""
-
 from Grid import Grid, GREYS, COLORS
 from rules import *
 
@@ -14,7 +7,7 @@ print('Hit [RETURN] to run.')
 print('Hit \'q\' to quit.')
 
 #Grid(shadow,pattern='patterns/shadow.pat')
-
+"""
 Grid(age, '1. Age. This represents the aging of a cell from red to\
  violet, to white, to death.',
      pattern='patterns/age.pat')
@@ -55,4 +48,4 @@ Grid(zombies, '9. Zombies. This rule simulates a zombie invasion\
 Grid(weirwood, '10. Weirwood. This rule results in the growth of a\
  weirwood tree from the Song of Ice and Fire, by\
  George RR Martin.',pattern='patterns/weirwood.pat')
-
+"""
