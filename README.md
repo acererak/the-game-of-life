@@ -1,7 +1,7 @@
 the-game-of-life
 ================
 
-An experiment in rule design for a cellular automaton life simulator. This is my first major project in an introductory CS class at Reed College, for professor Jim Fix.
+An experiment in rule design for a cellular automata life simulator. This is my first major project in an introductory CS class at Reed College, for professor Jim Fix.
 
 To learn more about Conway's Game of Life, venture here: http://en.wikipedia.org/wiki/Conway's_Game_of_Life.
 
