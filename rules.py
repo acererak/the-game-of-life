@@ -39,13 +39,10 @@ def age(cntr,nbrs):
 
         # make sure cntr never exceeds 100
       if cntr == 100:
-
         cntr = 100
-
       return cntr
   
     else:
-  
       # otherwise, die.
       return 0
 
@@ -64,7 +61,6 @@ def age(cntr,nbrs):
       # come alive, though not instantly white.
       # starts red, instead
       cntr = 1
-
       return cntr
     
     # otherwise, stay dead.
@@ -169,8 +165,6 @@ def contrast(cntr,nbrs):
     else:
       return 0
 
-
-
   # Evaluate the current state of the cell.
   if life(cntr) > 0:
 
@@ -185,11 +179,9 @@ def contrast(cntr,nbrs):
 
         # make cntr = 0
         cntr = 0
-
         return cntr  
 
       else:
-
         return cntr
 
     # If the cell is lighter, however...
@@ -198,21 +190,18 @@ def contrast(cntr,nbrs):
       # Make it lighter, still.
       cntr = cntr + 5
 
-        # if the lightening process produces a number over 100...
+      # if the lightening process produces a number over 100...
       if cntr > 100:
 
         # make cntr = 100
         cntr = 100
-
         return cntr
 
       else:
-
         return cntr
 
   # Or if the cell is already dead, keep it dead
   else:
-
     return 0
 
 #
@@ -245,7 +234,6 @@ def sharpen(cntr,nbrs):
     # and apply it to widence the gap according to how great
     # that difference is.
     cntr = cntr - (difference//2)
-
     return cntr
 
   else:
@@ -256,7 +244,6 @@ def sharpen(cntr,nbrs):
     # and apply it to widen the gap according to how great
     # that difference is
     cntr = cntr + (difference//2)
-
     return cntr
 
 #
@@ -349,15 +336,12 @@ def shadow(cntr,nbrs):
 
       # convert your cell to the color of the fill
       cntr = 1
-
       return cntr
     
     else:
-
       return cntr
 
   else:
-
     return cntr  
 
 #
@@ -394,30 +378,22 @@ def comet(cntr,nbrs):
 
       # control the color not to burn out
       if cntr < 9:
-
         cntr = 9
-
         return cntr
-
       return cntr
     
     # check to see if you're near the impact point (a cntr of 8 denotes impact)
     elif nbrs.W == 8 or nbrs.E == 8 or nbrs.S == 8:
-
       cntr = 7
-
       return cntr
 
     # explosion radius round two (a cntr of 7 denotes one step removed in radius from impact)
     elif nbrs.W == 7 or nbrs.E == 7 or nbrs.S == 7:
-
       # decrement explosion one more time
       cntr = 6
-
       return cntr
 
     else:
-
       return cntr
 
   # if you're colored...
@@ -430,20 +406,15 @@ def comet(cntr,nbrs):
 
         # begin explosion
         cntr = 8
-
         return cntr
 
       else:
-
         cntr = 0
-
         return cntr
     
     # otherwise, shift a colored square to black
     else: 
-
       cntr = 0
-
       return cntr
 
 
@@ -455,7 +426,6 @@ def comet(cntr,nbrs):
 
       # if so, turn yourself off
       cntr = 0
-
       return cntr
 
     # otherwise...
@@ -497,7 +467,6 @@ def armageddon(cntr,nbrs):
       if r > 985:
 
         cntr = 100
-
         return cntr
     
   # Check to see if you are dead and not in the top
@@ -511,18 +480,13 @@ def armageddon(cntr,nbrs):
 
       # control the color not to burn out
       if cntr < 9:
-
         cntr = 9
-
         return cntr
-
       return cntr
     
     # check to see if you're near the impact point (a cntr of 8 denotes impact)
     elif nbrs.W == 8 or nbrs.E == 8 or nbrs.S == 8:
-
       cntr = 7
-
       return cntr
 
     # explosion radius round two (a cntr of 7 denotes one step removed in radius from impact)
@@ -530,11 +494,9 @@ def armageddon(cntr,nbrs):
 
       # start explosion cycle again -- hellfire everwhere!
       cntr = 9
-
       return cntr
 
     else:
-
       return cntr
 
   # if you're colored...
@@ -547,20 +509,15 @@ def armageddon(cntr,nbrs):
 
         # begin explosion
         cntr = 8
-
         return cntr
 
       else:
-
         cntr = 0
-
         return cntr
     
     # otherwise, shift a colored square to black
     else: 
-
       cntr = 0
-
       return cntr
 
 
@@ -572,7 +529,6 @@ def armageddon(cntr,nbrs):
 
       # if so, turn yourself off
       cntr = 0
-
       return cntr
 
     # otherwise...
@@ -638,15 +594,12 @@ def zombies(cntr,nbrs):
 
       # remove the human from the space
       cntr = 0
-
       return cntr
 
     # but if a zombie is nearby...
     else:
-
       # convert the human
       cntr = random.randint(1,4)
-
       return cntr
 
   # but if the space is occupied by a zombie...
@@ -654,14 +607,12 @@ def zombies(cntr,nbrs):
 
     # remove the zombie from the space
     cntr = 0
-
     return cntr
 
   # finally, if the space is empty...
   else:
 
     # give any nearby zombies priority to the space
-
     # the zombie follows the same protocol for movement, though within
     # a smaller range of options
 
@@ -671,33 +622,24 @@ def zombies(cntr,nbrs):
     # 4: spawns south
 
     if nbrs.E == 1:
-
       cntr = random.randint(1,4)
-
       return cntr
 
     elif nbrs.S == 2:
-
       cntr = random.randint(1,4)
-
       return cntr
 
     elif nbrs.W == 3:
-
       cntr = random.randint(1,4)
-
       return cntr
 
     elif nbrs.N == 4:
-
       cntr = random.randint(1,4)
-
       return cntr
 
     # or, lacking nearby zombies, give the humans a chance to move here
 
     # about random human movement:
-
     # random movement is simulated by spawning life within a cell
     # according to a randomly generated value. Each value subsequently
     # only triggers spawning in a neighbor cell (aka movement) according
@@ -713,32 +655,23 @@ def zombies(cntr,nbrs):
     # one tribe may survive. For reference, see AMC's The Walking Dead.
 
     elif nbrs.E > 19 and nbrs.E < 40:
-
       cntr = random.randint(20,99)
-
       return cntr
 
     elif nbrs.S > 39 and nbrs.S < 60:
-
       cntr = random.randint(20,99)
-
       return cntr
 
     elif nbrs.W > 59 and nbrs.W < 80:
-
       cntr = random.randint(20,99)
-
       return cntr
 
     elif nbrs.N > 79 and nbrs.N < 100:
-
       cntr = random.randint(20,99)
-
       return cntr
 
     # otherwise, leave the space no one "went to" blank
     else:
-
       return cntr
 
 
@@ -775,152 +708,105 @@ def weirwood(cntr,nbrs):
 
   # turn the tree white
   if cntr > 0 and cntr < 100 and cntr != 1:
-
     cntr = 100
-
     return cntr
 
   # begin growing the tree, starting with the trunk
   if nbrs.S == 100 and cntr != 100 and living < 2:
-
     cntr = 90
-
     return cntr
 
   elif nbrs.S == 90:
-
     cntr = 89
-
     return cntr
 
   elif nbrs.S == 89:
-
     cntr = 88
-
     return cntr
 
   elif nbrs.S == 88:
-
     cntr = 87
-
     return cntr
 
   elif nbrs.S == 87:
-
     cntr = 86
-
     return cntr
 
   elif nbrs.S == 86:
-
     cntr = 85
-
     return cntr
 
   # split the trunk and build the left side...
   elif nbrs.SE == 85:
-
     cntr = 84
-
     return cntr
 
   elif nbrs.SE == 84:
-
     cntr = 83
-
     return cntr
 
   elif nbrs.SE == 83:
-
     cntr = 82
-
     return cntr
 
   elif nbrs.SE == 82:
-
     cntr = 81
-
     return cntr
 
   elif nbrs.SE == 81:
-
     cntr = 80
-
     return cntr
 
   elif nbrs.SE == 80:
-
     cntr = 1
-
     return cntr
 
   # and then build the right side
   elif nbrs.SW == 85:
-
     cntr = 74
-
     return cntr
 
   elif nbrs.SW == 74:
-
     cntr = 73
-
     return cntr
 
   elif nbrs.SW == 73:
-
     cntr = 72
-
     return cntr
 
   elif nbrs.SW == 72:
-
     cntr = 71
-
     return cntr
 
   elif nbrs.SW == 71:
-
     cntr = 70
-
     return cntr
 
   elif nbrs.SW == 70:
-
     cntr = 1
-
     return cntr
 
   # now build the leaves
   
   # left branch top
   elif nbrs.SW == 82 or nbrs.SW == 80:
-
     cntr = 1
-
     return cntr
 
   # left branch bottom
   elif nbrs.NE == 81:
-
     cntr = 1
-
     return cntr
 
   # right branch top
   elif nbrs.SE == 72 or nbrs.SE == 70:
-
     cntr = 1
-
     return cntr
 
   # right branch, bottom
   elif nbrs.NW == 71:
-
     cntr = 1
-
     return cntr
 
   else:
-
     return cntr
